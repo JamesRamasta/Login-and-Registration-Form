@@ -2,7 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fascinate|Roboto:300,400,500,700&display=swap"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,34 +22,198 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- ===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- ===== Iconify ===== -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Login and Registration form</title>
+    <img src="ust.jpg" alt="ust" width="1000" height="620" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script>
+      function matchPassword(pswd1, pswd2) {
+        var pw1 = document.getElementById("pswd1").value;
+        var pw2 = document.getElementById("pswd2").value;
+        if (pw1 != pw2) {
+          alert("Password did not match");
+        }
+      }
+  
+      function myFunction() {
+        var x = document.getElementById("pswd1");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      function myFunction2() {
+        var x = document.getElementById("pswd2");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  
+
+
+    <div class="container">
+      <div class="forms overflow-auto">
+        <div class="form login">
+          <span class="title">Login</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Enter your Student ID Number"
+                class="form-control"
+                required
+              />
+              <i class="uil uil-dialpad-alt"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="input-field button">
+              <button type="button" id="btnlogin" class="btn btn-primary btn-block btnlog">
+                Login
+              </button>
+
+              <script type="text/javascript">
+                document.getElementById("btnlogin").onclick = function () {
+                    location.href = "homepage.html";
+                };
+                </script>
+             
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Not a member?
+              <a href="#" class="text signup-link">Register now</a>
+            </span>
+          </div>
+        </div>
+
+      <!-- Registration Form -->
+      <div class="form signup">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <span class="title">Registration</span>
+
+        <form action="#" id="formsignup">
+          <div class="input-field">
+            <input
+              type="text"
+              placeholder="Enter your Student ID Number"
+              required
+            />
+            <i class="uil uil-dialpad-alt"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Enter your Last Name" required />
+            <i class="uil uil-align-justify"></i>
+          </div>
+
+          <div class="input-field">
+            <input type="text" placeholder="Enter your Given Name" required />
+            <i class="uil uil-align-justify"></i>
+          </div>
+
+          <div class="input-field">
+            <input type="text" placeholder="Enter your Middle Name" required />
+            <i class="uil uil-align-justify"></i>
+          </div>
+
+          <div class="input-field">
+            <input type="text" placeholder="Enter your College" required />
+            <i class="uil uil-location-pin-alt"></i>
+          </div>
+
+          <div class="input-field">
+            <input
+              type="text"
+              placeholder="Enter your Program Enrolled"
+              required
+            />
+            <i class="uil uil-clipboard-alt"></i>
+          </div>
+
+          <div class="input-field">
+            <input type="text" placeholder="Enter your Year Level" required />
+            <i class="uil uil-calendar-alt"></i>
+          </div>
+
+          <div class="input-field">
+            <input
+              type="password"
+              class="password"
+              placeholder="Create a password"
+              onclick="myFunction()"
+              required
+            />
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              class="password"
+              placeholder="Confirm a password"
+              onclick="myFunction2()"
+              required
+            />
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+
+          <div class="input-field button">
+            <button type="button" class="btn btn-primary btn-block btnreg">
+              Register
+            </button>
+            <button type="button" class="btn btn-primary btn-block btnregcancel" style="background-color:red;">
+              Cancel
+            </button>
+          </div>
+        </form>
+
+        <div class="login-signup">
+          <br/>
+          <span class="text"
+            >Have an Account?
+            <a href="#" class="text login-link">Login now</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    
   </body>
 </html>
