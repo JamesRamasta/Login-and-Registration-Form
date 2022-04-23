@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/Login-and-Registration-Form/static/css/main.31d6cfe0.css",
+    "main.js": "/Login-and-Registration-Form/static/js/main.e5bbecab.js",
+    "index.html": "/Login-and-Registration-Form/index.html",
+    "main.e5bbecab.js.map": "/Login-and-Registration-Form/static/js/main.e5bbecab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.e5bbecab.js"
+  ]
+}
