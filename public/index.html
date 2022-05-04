@@ -43,36 +43,6 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <script>
-      function matchPassword(pswd1, pswd2) {
-        var pw1 = document.getElementById("pswd1").value;
-        var pw2 = document.getElementById("pswd2").value;
-        if (pw1 != pw2) {
-          alert("Password did not match");
-        }
-      }
-  
-      function myFunction() {
-        var x = document.getElementById("pswd1");
-        if (x.type === "password") {
-          x.type = "text";
-        } else {
-          x.type = "password";
-        }
-      }
-
-      function myFunction2() {
-        var x = document.getElementById("pswd2");
-        if (x.type === "password") {
-          x.type = "text";
-        } else {
-          x.type = "password";
-        }
-      }
-    </script>
-  
-
-
     <div class="container">
       <div class="forms overflow-auto">
         <div class="form login">
@@ -83,18 +53,16 @@
               <input
                 type="text"
                 placeholder="Enter your Student ID Number"
-                class="form-control"
-                required
-              />
+                class="form-control" required/>
+
               <i class="uil uil-dialpad-alt"></i>
             </div>
+            
             <div class="input-field">
               <input
                 type="password"
                 class="password"
-                placeholder="Enter your password"
-                required
-              />
+                placeholder="Enter your password" required/>
               <i class="uil uil-lock icon"></i>
               <i class="uil uil-eye-slash showHidePw"></i>
             </div>
@@ -103,7 +71,6 @@
               <button type="button" id="btnlogin" class="btn btn-primary btn-block btnlog">
                 Login
               </button>
-
               <script type="text/javascript">
                 document.getElementById("btnlogin").onclick = function () {
                     location.href = "homepage.html";
@@ -189,6 +156,35 @@
               onclick="myFunction2()"
               required
             />
+
+            <script>
+              function matchPassword(pswd1, pswd2) {
+                var pw1 = document.getElementById("pswd1").value;
+                var pw2 = document.getElementById("pswd2").value;
+                if (pw1 != pw2) {
+                  alert("Password did not match");
+                }
+              }
+          
+              function myFunction() {
+                var x = document.getElementById("pswd1");
+                if (x.type === "password") {
+                  x.type = "text";
+                } else {
+                  x.type = "password";
+                }
+              }
+        
+              function myFunction2() {
+                var x = document.getElementById("pswd2");
+                if (x.type === "password") {
+                  x.type = "text";
+                } else {
+                  x.type = "password";
+                }
+              }
+            </script>
+
             <i class="uil uil-lock icon"></i>
             <i class="uil uil-eye-slash showHidePw"></i>
           </div>
