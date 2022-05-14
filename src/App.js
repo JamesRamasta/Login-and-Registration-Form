@@ -68,12 +68,4 @@ export default function App() {
     aboutUs.classList.add("hide");
     signUp.classList.add("hide");
   }
-
-
-  
-
-
-
- 
-
 }
