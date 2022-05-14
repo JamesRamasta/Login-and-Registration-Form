@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Login-and-Registration-Form/static/css/main.31d6cfe0.css",
-    "main.js": "/Login-and-Registration-Form/static/js/main.e5bbecab.js",
+    "main.css": "/Login-and-Registration-Form/static/css/main.abd64e84.css",
+    "main.js": "/Login-and-Registration-Form/static/js/main.750f2f82.js",
     "index.html": "/Login-and-Registration-Form/index.html",
-    "main.e5bbecab.js.map": "/Login-and-Registration-Form/static/js/main.e5bbecab.js.map"
+    "main.abd64e84.css.map": "/Login-and-Registration-Form/static/css/main.abd64e84.css.map",
+    "main.750f2f82.js.map": "/Login-and-Registration-Form/static/js/main.750f2f82.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.e5bbecab.js"
+    "static/css/main.abd64e84.css",
+    "static/js/main.750f2f82.js"
   ]
 }
