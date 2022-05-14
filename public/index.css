@@ -8,186 +8,134 @@
   font-family: "Poppins", sans-serif;
 }
 
-img {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  border-radius: 3px;
-  
-}
-
 body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fce40eb9;
+  background-image: url("ust.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.container {
-  position: fixed;
-  max-width: 430px;
-  width: 100%;
-  background: #fff;
+.content {
+  background-color: aliceblue;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 0 20px;
-}
-
-.container .forms{
-  display: flex;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
   align-items: center;
-  height: 440px;
-  width: 200%;
-  transition: height 0.2s ease;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-
-.container .form {
-  width: 50%;
-  padding: 30px;
-  background-color: #fff;
-  transition: margin-left 0.18s ease;
+/*HomePage*/
+.title {
+  text-align: center;
+  color: black;
 }
 
-.container.active .login {
-  margin-left: -50%;
-  opacity: 0;
-  transition: margin-left 0.18s ease, opacity 0.15s ease;
-}
-
-.container .signup {
-  opacity: 0;
-  transition: opacity 0.09s ease;
-}
-.container.active .signup {
-  opacity: 1;
-  transition: opacity 0.2s ease;
-}
-
-.container.active .forms {
-  height: 600px;
-}
-
-.container .form .title {
-  position: relative;
-  font-size: 27px;
-  font-weight: 600;
-}
-
-.form .title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  background-color: #e4ce0a;
-  border-radius: 25px;
-}
-
-.form .input-field {
-  position: relative;
+/*Start Button*/
+.btn-success {
+  font-size: 25px;
+  width: 100px;
   height: 50px;
-  width: 100%;
-  margin-top: 30px;
 }
 
-.input-field input {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 0 35px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  border-bottom: 2px solid #ccc;
-  border-top: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.input-field input:is(:focus, :valid) {
-  border-bottom-color: #e4ce0a;
-}
-
-.input-field i {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
-  font-size: 23px;
-  transition: all 0.2s ease;
-}
-
-.input-field input:is(:focus, :valid) ~ i {
-  color: #e4ce0a;
-}
-
-.input-field i.icon {
-  left: 0;
-}
-
-.input-field i.showHidePw {
-  right: 0;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.form .checkbox-text {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.checkbox-text .checkbox-content {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-content input {
-  margin: 0 8px -2px 4px;
-  accent-color: #e4ce0a;
-}
-
-.form .text {
-  color: #333;
-  font-size: 14px;
-  padding-top: 10px;
-}
-
-.form a.text {
-  color: #e4ce0a;
-  text-decoration: none;
-}
-.form a:hover {
-  text-decoration: underline;
-}
-
-.form .button {
-  margin-top: 35px;
-  color: #e4ce0a;
-}
-
-.form .button input {
-  border: none;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border-radius: 6px;
-  background-color: #e4ce0a;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button input:hover {
-  background-color: #e4ce0a;
-}
-
-.form .login-signup {
-  margin-top: 30px;
+/* Game Structure */
+.game-section {
   text-align: center;
 }
+
+.game--title {
+  font-size: 65px;
+  color: #f5af0d;
+  margin: 10px auto;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 10px auto;
+  background-color: #550404;
+  color: #ffe609;
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 2px 2px 2px #ecd7ba;
+  border: 2px solid #ecd7ba;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+}
+
+.game--status {
+  font-size: 50px;
+  color: #f5af0d;
+  margin: 20px auto;
+}
+
+.btn-secondary {
+  color: black;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.btn-danger {
+  color: black;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.btn-primary {
+  color: black;
+  width: 70%;
+  height: 50px;
+  font-size: 25px;
+}
+
+.hide {
+  display: none;
+}
+
+#about {
+  text-align: center;
+  align-items: center;
+}
+
+#form-signup {
+  text-align: center;
+  align-items: center;
+}
+
+/*Login Page*/
+
+input[type="text"]{
+  width: 70%;
+  padding: 12px 20px ;
+  margin: 10px 0;
+  
+  
+}
+input[type="password"] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+ 
+}
+
+#btnSignup{
+  font-size: 20px;
+}
+
+#btnbackLogin{
+  font-size: 20px;
+}
+
 
